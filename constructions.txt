@@ -13,3 +13,7 @@ Controllerの作成
 Toppage
 
 rails generate controller toppages index
+
+Category
+
+rails generate controller categories index show new create edit update destroy
