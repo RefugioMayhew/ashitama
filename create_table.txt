@@ -1,0 +1,15 @@
+Modelの準備
+
+Model Region
+rails generate model Region name:string
+
+Model Category
+rails generate model Category name:string
+
+Model Team
+rails generate model Team name:string url:string region:references category:references
+
+Controllerの作成
+Toppage
+
+rails generate controller toppages index
