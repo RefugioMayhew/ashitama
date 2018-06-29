@@ -1,0 +1,24 @@
+<h1>Teams#edit</h1>
+<p>Find me in app/views/teams/edit.html.erb</p>
+
+<div>
+  <%= form_for(@team) do |f| %>
+    <table>
+      <tr>
+        <th>team name</th>
+        <th>region</th>
+        <th>category</th>
+      </tr>
+      <tr>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.collection_select :region_id, Region.all, :id, :name %></td>
+        <td><%= f.collection_select :category_id, Category.all, :id, :name %></td>
+      </tr>
+    </table>
+    <%= f.submit "submit" %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "teams", teams_path %>
+</div>

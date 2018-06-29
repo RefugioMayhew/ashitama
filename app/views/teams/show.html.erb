@@ -1,0 +1,23 @@
+<h1>Teams#show</h1>
+<p>Find me in app/views/teams/show.html.erb</p>
+
+<div>
+  <table>
+    <tr>
+      <th>team name</th>
+      <th>team region</th>
+      <th>team category</th>
+    </tr>
+    <tr>
+      <td><%= @team.name %></td>
+      <td><%= @team.region.name %></td>
+      <td><%= @team.category.name %></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <%= link_to "teams", teams_path %>
+  <%= link_to "edit", edit_team_path %>
+  <%= link_to "delete", team_path, method: :delete %>
+</div>

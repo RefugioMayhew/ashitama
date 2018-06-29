@@ -1,0 +1,15 @@
+<h1>Teams#index</h1>
+<p>Find me in app/views/teams/index.html.erb</p>
+
+<div>
+  <ul>
+    <% @team.each do |team| %>
+      <li><%= link_to team.id, team %>: <%= team.name %>:<%= team.region.name %>:<%= team.category.name %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div>
+  <%= link_to "new", new_team_path %>
+  <%= link_to "toppages", root_path %>
+</div>

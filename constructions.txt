@@ -20,3 +20,6 @@ rails generate controller categories index show new create edit update destroy
 
 Region
 rails generate controller regions index show new create edit update destroy
+
+Team
+rails generate controller teams index show new create edit update destroy
