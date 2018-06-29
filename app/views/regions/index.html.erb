@@ -2,11 +2,11 @@
 <p>Find me in app/views/regions/index.html.erb</p>
 
 <div>
-  <% @region.each do |region| %>
-    <ul>
+  <ul>
+    <% @region.each do |region| %>
       <li><%= link_to region.id, region %>: <%= region.name %></li>
-    </ul>
-  <% end %>  
+    <% end %>  
+  </ul>
 </div>
 
 <div>
