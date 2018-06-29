@@ -10,10 +10,13 @@ Model Team
 rails generate model Team name:string url:string region:references category:references
 
 Controllerの作成
-Toppage
 
+Toppage
 rails generate controller toppages index
 
-Category
 
+Category
 rails generate controller categories index show new create edit update destroy
+
+Region
+rails generate controller regions index show new create edit update destroy

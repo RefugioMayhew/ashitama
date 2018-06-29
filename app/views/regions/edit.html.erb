@@ -1,0 +1,14 @@
+<h1>Regions#edit</h1>
+<p>Find me in app/views/regions/edit.html.erb</p>
+
+<div>
+  <%= form_for(@region) do |f| %>
+    <%= f.label :name, "region_name" %>
+    <%= f.text_field :name %>
+    <%= f.submit "submit" %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "regions", regions_path %>
+</div>
