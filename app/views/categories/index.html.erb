@@ -1,15 +1,28 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
-
-<div>
-  <ul>
-    <% @category.each do |category| %>
-      <li><%= link_to category.id, category %>: <%= category.name %></li>
-    <% end %>
-  </ul>
-</div>
-
-<div>
-  <%= link_to "new", new_category_path %>
-  <%= link_to "toppage", root_path %>
+<div class ="container">
+  <div class ="row">
+    <div class ="col-md-6"> 
+    
+      <h1>Categories#index</h1>
+      <p>Find me in app/views/categories/index.html.erb</p>
+      
+      <table class ="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>category_id</th>
+            <th>category</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @category.each do |category| %>
+          <tr>
+            <td><%= link_to category.id, category %></td>
+            <td><%= category.name %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+        <%= link_to "new", new_category_path, class: 'btn btn-primary' %>
+        <%= link_to "toppage", root_path, class: 'btn btn-primary' %> 
+    </div>
+  </div>
 </div>

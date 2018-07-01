@@ -1,14 +1,16 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
-
-<%= form_for(@category) do |f| %>
-  <div>
-    <%= f.label :name, "category_name" %>
-    <%= f.text_field :name %>
-    <%= f.submit "submit" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Categories#new</h1>
+      <p>Find me in app/views/categories/new.html.erb</p>
+    
+      <%= form_for(@category) do |f| %>
+        <%= f.label :name, "category_name" %>
+        <%= f.text_field :name %>
+        <%= f.submit "submit", class: "btn btn-primary" %>
+      <% end %>
+    
+      <%= link_to "categories", categories_path%>
+    </div>
   </div>
-<% end %>
-
-<div>
-  <%= link_to "categories", categories_path %>
 </div>

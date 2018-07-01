@@ -1,12 +1,35 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
-
-<div>
-  <%= @category.name %> 
-</div>
-
-<div>
-  <%= link_to "categories", categories_path %>
-  <%= link_to "edit_category", edit_category_path %>
-  <%= link_to "delete", category_path, method: :delete %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Categories#show</h1>
+      <p>Find me in app/views/categories/show.html.erb</p>
+      
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>category_id</th>
+            <th>category_name</th>
+            <th>created_at</th>
+            <th>updated_at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @category.id %></td>
+            <td><%= @category.name %></td>
+            <td><%= @category.created_at %></td>
+            <td><%= @category.updated_at %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <%= link_to "categories", categories_path, class: "btn btn-primary" %>
+      <%= link_to "edit_category", edit_category_path, class: "btn btn-primary" %>
+      <%= link_to "delete", category_path, method: :delete, class: "btn btn-danger" %>
+    </div>
+  </div>
 </div>

@@ -1,20 +1,28 @@
-<h1>Teams#new</h1>
-<p>Find me in app/views/teams/new.html.erb</p>
-
-<div>
-  <%= form_for(@team) do |f| %>
-    <table border=1>
-      <tr>
-        <th>team name</th>
-        <th>region</th>
-        <th>category</th>
-      </tr>
-      <tr>
-        <td><%= f.text_field :name %></td>
-        <td><%= f.collection_select :region_id, Region.all, :id, :name %></td>
-        <td><%= f.collection_select :category_id, Category.all, :id, :name %></td>
-      </tr>
-    </table>
-    <%= f.submit "submit" %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Teams#new</h1>
+      <p>Find me in app/views/teams/new.html.erb</p>
+      
+      <%= form_for(@team) do |f| %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>team name</th>
+              <th>region</th>
+              <th>category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.text_field :name %></td>
+              <td><%= f.collection_select :region_id, Region.all, :id, :name %></td>
+              <td><%= f.collection_select :category_id, Category.all, :id, :name %></td>
+            </tr>
+          </tbody>
+        </table>
+        <%= f.submit "submit", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>
